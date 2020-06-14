@@ -1,0 +1,26 @@
+<section>
+    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+    <div class="year-list">
+        {% for year in postsByYear %}
+        <a href="#{{ year.name | cgi_escape }}" title="Posts from {{ year.name }}"
+           class="{{ year.name }}-link">{{ year.name }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="filterable-blocks">
+        {% for year in postsByYear %}
+        <div class="{{ year.name }}-block">
+            <h2>{{ year.name }}</h2>
+            <ul class="posts">
+                {% for post in year.items %}
+                <li>
+                    <time>{{ post.date | date:"%d %b %Y" }}</time>
+                    - <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,34 @@
+# Setup
+title:               Alexandre Jardin
+tagline:             My Github Pages
+description:         I write things with a computer.
+url:                 https://ajardin.fr
+baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  username:          ajardin
+  name:              Alexandre Jardin
+  email:             info@ajardin.fr
+  github_link:       https://github.com/ajardin
+  twitter_link:      https://twitter.com/alxjrdn
+  linkedin_link:     https://fr.linkedin.com/in/ajardin
+
+# Gems
+plugins:
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Custom parameters
+timezone:            Europe/Paris
+include:             [ _pages ]
+exclude:             [ .idea ]
+
+# Custom variables
+google_analytics_id: UA-152689871-1
