@@ -11,30 +11,25 @@ difficult to open an SSH connection on your EC2 instances as the associated IP a
 
 <!--more-->
 
-Before going further into details, here is a reminder for those who are not familiar with the concept.
+Before going further into details, here is a reminder about the auto-scaling concept.
 
-<div class="message">Amazon EC2 Auto Scaling helps you maintain application availability and allows you to dynamically
-scale your Amazon EC2 capacity up or down automatically according to conditions you define.</div>
+> Amazon EC2 Auto Scaling helps you maintain application availability and allows you to dynamically scale your Amazon
+> EC2 capacity up or down automatically according to conditions you define.
 
-There are two main advantages to using auto-scaling. Here is another extract from the
-[official presentation](https://aws.amazon.com/ec2/autoscaling/).
+There are two main advantages to using auto-scaling (from the [official presentation][1]).
 
-<div class="message">
-You can use Amazon EC2 Auto Scaling for fleet management of EC2 instances to help maintain the health and availability
-of your fleet and ensure that you are running your desired number of Amazon EC2 instances.
-</div>
+> You can use Amazon EC2 Auto Scaling for fleet management of EC2 instances to help maintain the health and
+> availability of your fleet and ensure that you are running your desired number of Amazon EC2 instances.
 
-<div class="message">
-You can also use Amazon EC2 Auto Scaling for dynamic scaling of EC2 instances to automatically increase the number of
-Amazon EC2 instances during demand spikes to maintain performance and decrease capacity during lulls to reduce costs.
-</div>
+> You can also use Amazon EC2 Auto Scaling for dynamic scaling of EC2 instances to automatically increase the number of
+> Amazon EC2 instances during demand spikes to maintain performance and decrease capacity during lulls to reduce costs.
 
 In addition to that, it's a security best practice to protect your application servers by using a
 **bastion architecture**. In other terms, only one EC2 instance will be exposed in a public subnet when all other EC2
 instances will be configured in a private subnet. And to access those servers, you'll need to open an SSH connection
 through the bastion host.
 
-<img src="{{ '/public/img/bastion_architecture.png' | absolute_url }}" alt="Bastion architecture"/>
+![AWS bastion architecture][2]
 
 Even if it's the preferable approach with cloud infrastructure, it's less user friendly when you need to reach one of
 your applications servers by SSH. Hopefully, it's not something you do very often on "production ready" platforms since
@@ -53,6 +48,11 @@ want to use my script, you will need three things:
 
 Long story short, everything is described below! The only thing you will probably need to change is the SSH account
 since I let `ec2-user` in my snippet.
-<script src="https://gist.github.com/ajardin/5a1bd9ce8bb29127fed4ba031fa216eb.js?file=aws-connect.sh"></script>
+
+{% gist ajardin/5a1bd9ce8bb29127fed4ba031fa216eb aws-connect.sh %}
 
 Thanks for reading!
+
+<!-- Resources -->
+[1]: https://aws.amazon.com/ec2/autoscaling/
+[2]: /public/img/bastion_architecture.png

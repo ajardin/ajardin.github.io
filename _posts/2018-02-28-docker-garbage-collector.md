@@ -11,15 +11,17 @@ things without impacting what you want to keep, like databases, for example.
 
 <!--more-->
 
-<div class="message">Before executing something, please be sure to understand what it implies!</div>
+> Before executing something, please be sure to understand what it implies!
 
 Manual cleaning
 ---------------
 Of course, it's possible to remove images manually, containers and volumes.
-<script src="https://gist.github.com/ajardin/93f12f587f2bcce43aa294c97e44a201.js?file=1-manual-cleaning.sh"></script>
+
+{% gist ajardin/93f12f587f2bcce43aa294c97e44a201 1-manual-cleaning.sh %}
 
 You can even use the built-in version of these three commands.
-<script src="https://gist.github.com/ajardin/93f12f587f2bcce43aa294c97e44a201.js?file=2-manual-cleaning.sh"></script>
+
+{% gist ajardin/93f12f587f2bcce43aa294c97e44a201 2-manual-cleaning.sh %}
 
 But what if you want to remove everything except some specific elements?
 
@@ -47,7 +49,8 @@ All dangling volumes, except those whitelisted, are removed. That last part is o
 passed to the script; otherwise, the treatment is skipped.
 
 And finally, here is my custom version of the Docker garbage collector.
-<script src="https://gist.github.com/ajardin/93f12f587f2bcce43aa294c97e44a201.js?file=3-advanced-cleaning.sh"></script>
+
+{% gist ajardin/93f12f587f2bcce43aa294c97e44a201 3-advanced-cleaning.sh %}
 
 Thanks for reading!
 

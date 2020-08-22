@@ -19,10 +19,12 @@ Until then, we have to implement something by ourselves.
 After a discussion with the AWS support, we concluded that the best solution is to implement a custom logic at the
 EC2 instance boot through the launch configuration. The script is built on top of AWS CLI with the usage of EC2
 instance metadata. Let's have a look.
-<script src="https://gist.github.com/ajardin/b085c7066a81212930355d5ce6f0d6b2.js?file=1-esb-tags.sh"></script>
+
+{% gist ajardin/b085c7066a81212930355d5ce6f0d6b2 1-esb-tags.sh %}
 
 The only requirement to implement that script is to attach the following policy on your EC2 instances. Otherwise, it
 won't be possible for your EC2 instances to retrieve their tags and add them to EBS volumes.
 
-<script src="https://gist.github.com/ajardin/b085c7066a81212930355d5ce6f0d6b2.js?file=2-esb-policy.json"></script>
+{% gist ajardin/b085c7066a81212930355d5ce6f0d6b2 2-esb-policy.json %}
+
 Thanks for reading!

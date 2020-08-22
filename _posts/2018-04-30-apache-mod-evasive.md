@@ -17,10 +17,9 @@ multiple crawlers run in parallel by different SEO people who wanted to check th
 quite aggressive. Even our hosting provider at that time thought it was an attack.
 
 To prevent the story from repeating itself, I did some research about DoS mitigation with Apache. And I eventually
-found **Jonathan Zdziarski's** work on [mod_evasive](https://github.com/jzdziarski/mod_evasive). It was exactly what I
-needed: an Apache module to add with only several lines of configuration. But then, I realized that the module was
-not compatible with Apache 2.4. That's why I decided to [fork his work](https://github.com/ajardin/mod_evasive) to make
-it compatible and improve a few things.
+found **Jonathan Zdziarski's** work on [mod_evasive][1]. It was exactly what I needed: an Apache module to add with
+only several lines of configuration. But then, I realized that the module was not compatible with Apache 2.4. That's
+why I decided to [fork his work][2] to make it compatible and improve a few things.
 
 How it works
 ------------
@@ -50,27 +49,35 @@ How to install
 How to configure
 ----------------
 mod_evasive has default options configured, but you may also add the following block to your `httpd.conf`.
-<script src="https://gist.github.com/ajardin/55cc558118f541a9f6e91c49e38f17b7.js?file=1-main.conf"></script>
+
+{% gist ajardin/55cc558118f541a9f6e91c49e38f17b7 1-main.conf %}
 
 Optionally you can also add the following directives.
-<script src="https://gist.github.com/ajardin/55cc558118f541a9f6e91c49e38f17b7.js?file=2-optional.conf"></script>
 
-You will find all details related to the configuration in the [README](https://github.com/ajardin/mod_evasive/blob/master/README.md).
+{% gist ajardin/55cc558118f541a9f6e91c49e38f17b7 2-optional.conf %}
+
+You will find all details related to the configuration in the [README][3].
 
 How to test
 -----------
 You can verify your setup by running a test with ApacheBench: you should see a lot of non-2XX responses within your
 results as in the example below.
-<script src="https://gist.github.com/ajardin/55cc558118f541a9f6e91c49e38f17b7.js?file=3-tests.log"></script>
+
+{% gist ajardin/55cc558118f541a9f6e91c49e38f17b7 3-tests.log %}
 
 Contributions
 -------------
 To be honest, I've only added changes on an already impressive module. There are three significant differences between
 my fork and the official repository:
-- Add support for Apache 2.4
-- Add the possibility to use XFF HTTP request header
-- Replace HTTP_FORBIDDEN by HTTP_TOO_MANY_REQUESTS
+* Add support for **Apache 2.4**
+* Add the possibility to use XFF HTTP request header
+* Replace `HTTP_FORBIDDEN` by `HTTP_TOO_MANY_REQUESTS`
 
 If you are not interested in this, you can continue to use the legacy module without any issue.
 
 Thanks for reading!
+
+<!-- Resources -->
+[1]: https://github.com/jzdziarski/mod_evasive
+[2]: https://github.com/ajardin/mod_evasive
+[3]: https://github.com/ajardin/mod_evasive/blob/master/README.md
