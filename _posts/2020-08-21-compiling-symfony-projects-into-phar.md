@@ -58,11 +58,8 @@ mandatory to follow the steps described in the [humbug/box documentation][5] for
 * put the application in prod mode with the `composer dump-env prod` command
 * refresh and warm the application cache before compiling
 
-Here is what you need to do if you want to allow the PHAR compilation of your Symfony project.
-
 To configure the compilation, you have to write a JSON file which is far from being verbose. The
-[humbug/box documentation][6] entirely explains the available configuration parameters. I will let you take a look at
-it rather than paraphrasing it.
+[humbug/box documentation][6] explains the available configuration parameters. I will let you take a look.
 
 {% gist ajardin/4be6914eeb42693da5464ece609e4fe7 4-compilation-configuration.diff %}
 
@@ -79,6 +76,11 @@ Next time we will see how to automate the generation and distribution.
 
 Thanks for reading!
 
+-------------------
+
+> This post is also published on [DEV][7].  
+> Feel free to go there if you wish to react or participate in the discussion.
+
 <!-- Resources -->
 [1]: /public/img/phar-workflow.jpeg
 [2]: https://github.com/humbug/box
@@ -86,3 +88,4 @@ Thanks for reading!
 [4]: https://github.com/ajardin/docker-images/tree/master/common/humbug-box
 [5]: https://github.com/humbug/box/blob/master/doc/symfony.md#symfony-support
 [6]: https://github.com/humbug/box/blob/master/doc/configuration.md#configuration
+[7]: https://dev.to/ajardin/compiling-symfony-projects-into-phar-26df

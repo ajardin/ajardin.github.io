@@ -20,16 +20,12 @@ Blackfire provides several statistics: wall time, I/O wait, CPU time, memory con
 Here is my first profile, without page cache and blocks cache. It allows profiling the real output and not the whole
 Magento initialization.
 
-Something weird can already be spotted.
-
 ![Blackfire results before optimizations][1]
 ![SQL queries before optimizations][2]
 
 You can already see that more than 700 SQL queries are executed on each page only for something related to the URL
 rewrites system. In the meantime, the call graph shows that the **inclusive time** within the `navigation/top.phtml`
 template is equal to **3.92s**.
-
-There is an issue somewhere related to the main menu calculation!
 
 After further investigations, I found out that the performance issue was due to the wrong usage of a custom method in
 the main menu generation. Where we were retrieving each category URL to populate HTML links, this custom method loads
@@ -47,11 +43,11 @@ And with only these few modified characters, here are the results.
 
 Now that the issue is gone, how to be sure that it won't come back again?
 
-Afterwords
-----------
+Preventing regressions
+----------------------
 It's common to add a regression by ignoring good practices acquired through experience when a lot of people are working
-on a project. Especially when team members change often, the code review can protect against these errors, of course,
-but it's time-consuming to do it manually. In that case, it would be a good idea to automate these checks.
+on a project. Especially when team members change often. The code review can protect against these errors, but it's
+time-consuming to do it manually. In that case, it would be a good idea to automate these checks.
 
 Blackfire also allows performance testing in addition to profiling. You can use these assertions against all data
 gathered by Blackfire (time dimensions and even more). During a Blackfire profile, it will look for a `.blackfire.yml`
@@ -67,12 +63,12 @@ incorrectly uses it on every new pull request, you can add an assertion.
 
 {% gist ajardin/4f47890851d284748f1cf7ac0dbeff96 3-assertion.yml %}
 
-Our test suite now contains a new metric and a new metric. Here is what it looks like from the Blackfire
-results page based on the tests described above.
+Our test suite now contains a new metric and a new assertion. Here is what it looks like from the Blackfire results
+page based on the tests described above.
 
 ![Blackfire assertions results][4]
 
-Conclusion
+Afterwords
 ----------
 It's impressive to see how Blackfire can tell us precisely what is the biggest mistake in a project in less than one
 hour. But Blackfire does not limit to the manual profiling, and the testing part is a must-have for long-running
@@ -80,8 +76,14 @@ projects.
 
 Thanks for reading!
 
+-------------------
+
+> This post is also published on [DEV][5].  
+> Feel free to go there if you wish to react or participate in the discussion.
+
 <!-- Resources -->
 [1]: /public/img/screenshots/profile_before_toolbar.png
 [2]: /public/img/screenshots/profile_before_sql.png
 [3]: /public/img/screenshots/profile_after_toolbar.png
 [4]: /public/img/screenshots/profile_assertions.png
+[5]: https://dev.to/ajardin/blackfire-magento-475j

@@ -28,3 +28,11 @@ won't be possible for your EC2 instances to retrieve their tags and add them to 
 {% gist ajardin/b085c7066a81212930355d5ce6f0d6b2 2-esb-policy.json %}
 
 Thanks for reading!
+
+-------------------
+
+> This post is also published on [DEV][1].  
+> Feel free to go there if you wish to react or participate in the discussion.
+
+<!-- Resources -->
+[1]: https://dev.to/ajardin/adding-tags-to-ebs-volumes-3mio

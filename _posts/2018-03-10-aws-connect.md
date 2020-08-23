@@ -11,12 +11,7 @@ difficult to open an SSH connection on your EC2 instances as the associated IP a
 
 <!--more-->
 
-Before going further into details, here is a reminder about the auto-scaling concept.
-
-> Amazon EC2 Auto Scaling helps you maintain application availability and allows you to dynamically scale your Amazon
-> EC2 capacity up or down automatically according to conditions you define.
-
-There are two main advantages to using auto-scaling (from the [official presentation][1]).
+There are two main advantages to using auto-scaling ([source][1]).
 
 > You can use Amazon EC2 Auto Scaling for fleet management of EC2 instances to help maintain the health and
 > availability of your fleet and ensure that you are running your desired number of Amazon EC2 instances.
@@ -53,6 +48,12 @@ since I let `ec2-user` in my snippet.
 
 Thanks for reading!
 
+-------------------
+
+> This post is also published on [DEV][3].  
+> Feel free to go there if you wish to react or participate in the discussion.
+
 <!-- Resources -->
 [1]: https://aws.amazon.com/ec2/autoscaling/
 [2]: /public/img/bastion_architecture.png
+[3]: https://dev.to/ajardin/connecting-to-ec2-instances-without-a-headache-3onl

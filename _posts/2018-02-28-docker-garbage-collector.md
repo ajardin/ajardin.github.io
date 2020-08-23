@@ -15,7 +15,7 @@ things without impacting what you want to keep, like databases, for example.
 
 Manual cleaning
 ---------------
-Of course, it's possible to remove images manually, containers and volumes.
+It's possible to remove images manually, containers and volumes.
 
 {% gist ajardin/93f12f587f2bcce43aa294c97e44a201 1-manual-cleaning.sh %}
 
@@ -40,7 +40,7 @@ These two steps would prevent any unwanted loss if we forgot to configure exclus
 the script.
 
 **3. Remove all unused images and containers**  
-The source code of the Spotify garbage collector is downloaded from GitHub and the corresponding Docker image is built
+The source code of the Spotify garbage collector is downloaded from GitHub, and the corresponding Docker image is built
 from it. After that, a container is run with all exclusion patterns passed as environment variables. And all unused
 images and containers are removed, except those whitelisted.
 
@@ -54,6 +54,12 @@ And finally, here is my custom version of the Docker garbage collector.
 
 Thanks for reading!
 
+-------------------
+
+> This post is also published on [DEV][3].  
+> Feel free to go there if you wish to react or participate in the discussion.
+
 <!-- Resources -->
 [1]: https://github.com/spotify/docker-gc
 [2]: https://github.com/spotify/docker-gc/pull/142
+[3]: https://dev.to/ajardin/garbage-collector-for-docker-4n09

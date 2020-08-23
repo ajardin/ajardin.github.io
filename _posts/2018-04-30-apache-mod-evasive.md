@@ -43,7 +43,7 @@ How to install
 --------------
 1. Extract this archive
 2. Run `$APACHE_ROOT/bin/apxs -cia mod_evasive.c`
-3. The module will be built and installed into `$APACHE_ROOT/modules`, and loaded into your `httpd.conf`
+3. The module will be built and installed into `$APACHE_ROOT/modules`, and loaded in `httpd.conf`
 4. Restart Apache
 
 How to configure
@@ -77,7 +77,13 @@ If you are not interested in this, you can continue to use the legacy module wit
 
 Thanks for reading!
 
+-------------------
+
+> This post is also published on [DEV][4].  
+> Feel free to go there if you wish to react or participate in the discussion.
+
 <!-- Resources -->
 [1]: https://github.com/jzdziarski/mod_evasive
 [2]: https://github.com/ajardin/mod_evasive
 [3]: https://github.com/ajardin/mod_evasive/blob/master/README.md
+[4]: https://dev.to/ajardin/defending-against-apache-dos-attacks-3jj
