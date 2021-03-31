@@ -29,6 +29,3 @@ plugins:
 timezone:            Europe/Paris
 include:             [ _pages ]
 exclude:             [ .idea ]
-
-# Custom variables
-google_analytics_id: UA-152689871-1
