@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Alexandre Jardin</title>
+    <link>https://ajardin.fr/posts/</link>
+    <description>Recent content in Posts on Alexandre Jardin</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://ajardin.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Industrialization at Emakina</title>
+      <link>https://ajardin.fr/posts/industrialization-at-emakina/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/industrialization-at-emakina/</guid>
+      <description>&lt;p&gt;This article has been featured on &lt;a href=&#34;https://emakinafr.github.io/notre-industrialisation.html&#34;&gt;the Emakina technical blog&lt;/a&gt;.&lt;br&gt;&#xA;The purpose was to present industrialization within the company, and the work I&amp;rsquo;ve done to organize development processes.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p class=&#34;alert alert-warning&#34;&gt;Unlike the other posts, this one is only available in French.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;!-- Resources --&gt;</description>
+    </item>
+    <item>
+      <title>How to improve your Symfony commands</title>
+      <link>https://ajardin.fr/posts/how-to-improve-your-symfony-commands/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/how-to-improve-your-symfony-commands/</guid>
+      <description>&lt;p&gt;When we develop a Symfony project, we inherit a lot of default commands. For example, if we create a new project&#xA;starting from &lt;code&gt;symfony/website-skeleton&lt;/code&gt;, we already have more than 80 commands. We can prefix all our custom commands&#xA;with &lt;code&gt;app:&lt;/code&gt; so that they don&amp;rsquo;t get mixed up, but the display remains somewhat overloaded.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m going to present some of the tricks I configure on most of my Symfony projects.&lt;/p&gt;&#xA;&lt;p&gt;The main one consists of creating a new default command that will allow us to filter what is displayed via the&#xA;&lt;code&gt;bin/console&lt;/code&gt; instruction so that there are only our custom commands. Don&amp;rsquo;t worry! The &lt;code&gt;bin/console list&lt;/code&gt; behaviour&#xA;will not change to let us see all available commands.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distributing projects compiled into PHAR</title>
+      <link>https://ajardin.fr/posts/distributing-projects-compiled-into-phar/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/distributing-projects-compiled-into-phar/</guid>
+      <description>&lt;p&gt;We have seen, in a &lt;a href=&#34;https://ajardin.fr/posts/compiling-symfony-projects-into-phar/&#34;&gt;previous article&lt;/a&gt;, how it is possible to compile a Symfony project as a PHAR. If this&#xA;manipulation is quite simple to set up, the distribution must be straightforward to avoid wasting time for the project&#xA;maintainers.&lt;/p&gt;&#xA;&lt;p&gt;As a reminder, we need to have two projects in this context: a &lt;code&gt;source&lt;/code&gt; project (i.e. readable source code) and a&#xA;&lt;code&gt;binary&lt;/code&gt; project (i.e. PHAR archive). It will therefore be necessary to set up automated processes so that the binary&#xA;is updated after each commit and after each new release.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Compiling Symfony projects into PHAR</title>
+      <link>https://ajardin.fr/posts/compiling-symfony-projects-into-phar/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/compiling-symfony-projects-into-phar/</guid>
+      <description>&lt;p&gt;Most of the time, we use Composer to install tools developed in PHP, like any other library or framework. While this is&#xA;the simplest method, it has a significant drawback in that you will automatically inherit the dependencies of these&#xA;tools.&lt;/p&gt;&#xA;&lt;p&gt;This drawback can quickly become a blocking problem if you require a multitude of tools since the risk of conflicts&#xA;between dependencies will be higher. The problem is the same if you install these tools in your projects or your &lt;code&gt;HOME&lt;/code&gt;&#xA;directory (at the global level).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving Magento 2 administration</title>
+      <link>https://ajardin.fr/posts/improving-magento-2-administration/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/improving-magento-2-administration/</guid>
+      <description>&lt;p&gt;This article has been featured on &lt;a href=&#34;https://blog.blackfire.io/improving-the-magento-2-admin-performance.html&#34;&gt;the official Blackfire blog&lt;/a&gt;.&lt;br&gt;&#xA;The purpose was to illustrate how Blackfire helped me identify a significant performance bottleneck within Magento 2.&lt;/p&gt;&#xA;&lt;!-- Resources --&gt;</description>
+    </item>
+    <item>
+      <title>My conference about a PHP developers toolbox</title>
+      <link>https://ajardin.fr/posts/php-developers-toolbox/</link>
+      <pubDate>Mon, 25 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/php-developers-toolbox/</guid>
+      <description>&lt;p&gt;During the summer meetup organized with the AFUP Limoges, I gave a conference where I explained why it&amp;rsquo;s essential to&#xA;use relevant tools to be efficient as a developer. Even if the talk was in French, all my slides are in English except&#xA;the title, which is not the most important.&lt;/p&gt;&#xA;&lt;p&gt;My talk lasted about an hour during which I briefly covered seven different topics.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Docker&lt;/li&gt;&#xA;&lt;li&gt;Code Styles&lt;/li&gt;&#xA;&lt;li&gt;Static Analysis&lt;/li&gt;&#xA;&lt;li&gt;Security Audits&lt;/li&gt;&#xA;&lt;li&gt;Makefile&lt;/li&gt;&#xA;&lt;li&gt;Git Hooks&lt;/li&gt;&#xA;&lt;li&gt;Blackfire&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;There is no specific order to follow because the talk was built to be an overview of what it&amp;rsquo;s possible to implement at&#xA;the developer level to increase quality and productivity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Defending against Apache DoS attacks</title>
+      <link>https://ajardin.fr/posts/apache-mod-evasive/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/apache-mod-evasive/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Denial of Service&lt;/strong&gt; (DoS) attack is a cyber-attack in which someone tries to make a website or a service&#xA;unavailable for its intended users/customers by flooding a server with a massive number of requests. It&amp;rsquo;s comparable&#xA;to a Distributed Denial of Service (DDoS) attack, but that last one is run from many different sources. It makes the&#xA;attacks much more difficult to counter.&lt;/p&gt;&#xA;&lt;p&gt;While I was working on an AWS infrastructure for a client, I remembered that we had some issues in the past because of&#xA;multiple crawlers run in parallel by different SEO people who wanted to check the website. Their configuration was&#xA;quite aggressive. Even our hosting provider at that time thought it was an attack.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adding tags to EBS volumes</title>
+      <link>https://ajardin.fr/posts/aws-ebs-tags/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/aws-ebs-tags/</guid>
+      <description>&lt;p&gt;Tagging all your Amazon resources is a must-have if you want to have an efficient billing follow-up. It&amp;rsquo;s effortless in&#xA;most cases, but not always like with EBS volumes within an auto-scaling group. Even if it&amp;rsquo;s not natively possible,&#xA;there is still a solution with AWS.&lt;/p&gt;&#xA;&lt;p&gt;Currently, an auto-scaling group do not automatically apply its tags to EBS volumes attached to its EC2 instances.&#xA;There is only a pending feature request, and no ETA is provided. Maybe it will be possible in the next months, perhaps not.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Connecting to EC2 instances</title>
+      <link>https://ajardin.fr/posts/aws-connect/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/aws-connect/</guid>
+      <description>&lt;p&gt;AWS provides one powerful feature called &lt;strong&gt;auto-scaling&lt;/strong&gt;. If you configure it on your infrastructure, you will be able&#xA;to automatically adjust capacity to maintain optimal performances at the lowest possible cost. But it will be more&#xA;difficult to open an SSH connection on your EC2 instances as the associated IP addresses will change regularly.&lt;/p&gt;&#xA;&lt;p&gt;There are two main advantages to using auto-scaling (&lt;a href=&#34;https://aws.amazon.com/ec2/autoscaling/&#34;&gt;source&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p class=&#34;alert alert-info&#34;&gt;You can use Amazon EC2 Auto Scaling for fleet management of EC2 instances to help maintain the health and&#xA;availability of your fleet and ensure that you are running your desired number of Amazon EC2 instances.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Garbage collector for Docker</title>
+      <link>https://ajardin.fr/posts/docker-garbage-collector/</link>
+      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/docker-garbage-collector/</guid>
+      <description>&lt;p&gt;If you are heavily using Docker on your local environment, it&amp;rsquo;s common to have a lot of dangling images, stopped&#xA;containers, orphans volumes, etc. And if you have multiple environments, it can be challenging to clean only useless&#xA;things without impacting what you want to keep, like databases, for example.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p class=&#34;alert alert-warning&#34;&gt;Before executing something, please be sure to understand what it implies!&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;manual-cleaning&#34;&gt;Manual cleaning&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s possible to remove images manually, containers and volumes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blackfire &amp; Magento</title>
+      <link>https://ajardin.fr/posts/blackfire-and-magento/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>https://ajardin.fr/posts/blackfire-and-magento/</guid>
+      <description>&lt;p&gt;The first thing I profiled with Blackfire was a Magento project with PHP 5.5. Like most existing projects where the&#xA;addition of new features is constant, we started to face performance issues more and more often, while the codebase&#xA;keeps growing. The project began four years ago.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p class=&#34;alert alert-info&#34;&gt;This article uses several terms related to Blackfire.&lt;br&gt;&#xA;If you are not familiar with it, I suggest you read the excellent &lt;a href=&#34;https://docs.blackfire.io/php/training-resources/book/index&#34;&gt;PHP Code Performance Explained&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
